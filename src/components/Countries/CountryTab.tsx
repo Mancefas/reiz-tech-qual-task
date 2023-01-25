@@ -1,23 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-import './country-tab.scss'
+import './country-tab.scss';
 
 interface PropType {
-    country: {
-        name: string;
-        region: string;
-        area: number;
-        independent: boolean;
-    }
+  data: {
+    name: string;
+    region: string;
+    area: number;
+    independent: boolean;
+  };
 }
 
-export const CountryTab = ({ country }: PropType) => {
-    const { name, region, area } = country;
-    return (
-        <div className='country-tab__container'>
-            <h3> Name : {name}</h3>
-            <h3>Region : {region}</h3>
-            <h3> Area size : {area}</h3>
-        </div>
-    )
-}
+export const CountryTab = ({ data }: PropType) => {
+  const { name, region, area } = data;
+  return (
+    <div className="country-tab__container">
+      <h3>Name : {name}</h3>
+      <h3>Region : {region}</h3>
+      <h3>
+        Area : {area} km<sup>2</sup>
+      </h3>
+    </div>
+  );
+};
