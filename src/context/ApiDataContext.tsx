@@ -12,6 +12,8 @@ interface ApiDataContextStore {
   setApiData: (data: Country[]) => void;
   error: string;
   setError: (data: string) => void;
+  dataToShow: Country[];
+  setDataToShow: (data: Country[]) => void;
 }
 
 export const ApiDataContext = createContext<ApiDataContextStore>(
@@ -25,12 +27,15 @@ export const ApiDataContextProvider = ({
 }) => {
   const [apiData, setApiData] = useState<Country[]>([]);
   const [error, setError] = useState<string>('');
+  const [dataToShow, setDataToShow] = useState<Country[]>([]);
 
   const apiDataContextStore = {
     apiData,
     setApiData,
     error,
     setError,
+    dataToShow,
+    setDataToShow,
   };
 
   return (
