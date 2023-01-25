@@ -1,10 +1,10 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback } from 'react';
 
-import { useApiDataContext } from "../context/ApiDataContext";
-import { API_LINK } from "../constants/links";
+import { useApiDataContext } from '../context/ApiDataContext';
+import { API_LINK } from '../constants/links';
 
 export const useAPICall = () => {
-  const { setApiData, setError } = useApiDataContext();
+  const { setApiData, setError, setDataToShow } = useApiDataContext();
 
   const dataFromAPI = useCallback(async () => {
     try {
@@ -13,7 +13,8 @@ export const useAPICall = () => {
         setError('Something went wrong!!!!');
       }
       const data = await response.json();
-      setApiData(data)
+      setApiData(data);
+      setDataToShow(data);
     } catch (error) {
       setError(JSON.stringify(error));
     }
