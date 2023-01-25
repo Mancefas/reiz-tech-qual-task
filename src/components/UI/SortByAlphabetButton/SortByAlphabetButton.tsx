@@ -21,13 +21,8 @@ export const SortByAlphabetButton = () => {
   };
 
   return (
-    <>
-      {sortedFromA && (
-        <button onClick={() => handleSort('ZtoA')}>Sort Z-A</button>
-      )}
-      {!sortedFromA && (
-        <button onClick={() => handleSort('AtoZ')}>Sort A-Z</button>
-      )}
-    </>
+    <button onClick={() => handleSort(`${sortedFromA ? 'ZtoA' : 'AtoZ'}`)}>
+      Sort {sortedFromA ? 'Z to A' : 'A to Z'}
+    </button>
   );
 };
