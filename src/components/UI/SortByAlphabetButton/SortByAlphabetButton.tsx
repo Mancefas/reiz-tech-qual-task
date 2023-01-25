@@ -6,26 +6,28 @@ export const SortByAlphabetButton = () => {
   const { apiData, setApiData } = useApiDataContext();
   const [sortedFromA, setSortedFromA] = useState<boolean>(true);
 
-  const handleSortZtoA = () => {
-    const sortedData = [...apiData].sort((a, b) => {
-      return b.name.localeCompare(a.name, undefined, { sensitivity: 'base' });
-    });
-    setSortedFromA(false);
-    setApiData(sortedData);
-  };
+  const handleSort = (isSorting: string) => {
+    const isSortingAtoZ = isSorting === 'AtoZ' ? true : false;
 
-  const handleSortAtoZ = () => {
     const sortedData = [...apiData].sort((a, b) => {
-      return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+      const firstArg = isSorting === 'ZtoA' ? b : a;
+      const secondArg = isSorting === 'ZtoA' ? a : b;
+      return firstArg.name.localeCompare(secondArg.name, undefined, {
+        sensitivity: 'base',
+      });
     });
-    setSortedFromA(true);
+    setSortedFromA(isSortingAtoZ);
     setApiData(sortedData);
   };
 
   return (
     <>
-      {sortedFromA && <button onClick={handleSortZtoA}>Sort Z-A</button>}
-      {!sortedFromA && <button onClick={handleSortAtoZ}>Sort A-Z</button>}
+      {sortedFromA && (
+        <button onClick={() => handleSort('ZtoA')}>Sort Z-A</button>
+      )}
+      {!sortedFromA && (
+        <button onClick={() => handleSort('AtoZ')}>Sort A-Z</button>
+      )}
     </>
   );
 };
