@@ -1,3 +1,3 @@
-import { CountriesContainer } from './CountriesContainer';
+import { CountriesTable } from './CountriesTable';
 
-export default CountriesContainer;
+export default CountriesTable;

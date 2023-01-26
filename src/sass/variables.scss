@@ -1,4 +1,6 @@
-$button-color-default: #2da44e;
+$primary-color: #2da44e;
+
+$button-color-default: $primary-color;
 $button-color-hover: #67da67;
 $button-color-active: #49a549;
 $button-text-color: #ffffff;

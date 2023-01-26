@@ -4,10 +4,11 @@ import { CountryTab } from './CountryTab';
 import { useAPICall } from '../../api/apiCall';
 import { useApiDataContext } from '../../context/ApiDataContext';
 
-import './countries.scss';
+import './countries-table.scss';
+import LoadingSpinner from '../LoadingSpinner';
 
-export const CountriesContainer = () => {
-  const { dataToShow, error } = useApiDataContext();
+export const CountriesTable = () => {
+  const { dataToShow, error, isLoading } = useApiDataContext();
   useAPICall();
 
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -24,18 +25,20 @@ export const CountriesContainer = () => {
 
   return (
     <>
-      <section className="countries__container">
-        {error && <h2>Error {error}</h2>}
+      {isLoading && <LoadingSpinner />}
+      <section className="countries-table__container">
+        {error && !isLoading && <h2>Error {error}</h2>}
         {!error &&
+          !isLoading &&
           getCountriesToShow.map((country) => (
             <CountryTab key={country.name} data={country} />
           ))}
       </section>
-      <div className="countries__pagination-container">
+      <div className="countries-table__pagination-container">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="countries__pagination-button"
+          className="countries-table__pagination-button"
         >
           Prev
         </button>
@@ -45,7 +48,7 @@ export const CountriesContainer = () => {
         <button
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage === maxPages}
-          className="countries__pagination-button"
+          className="countries-table__pagination-button"
         >
           Next
         </button>
