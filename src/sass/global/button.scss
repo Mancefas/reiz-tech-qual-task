@@ -9,6 +9,7 @@
   border-radius: 8px;
   background-color: $button-color-default;
   border: none;
+  color: $button-text-color;
 
   &:hover {
     background-color: $button-color-hover;
