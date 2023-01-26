@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { FilterByAreaButton } from '../UI/FilterByAreaButton/FilterByAreaButton';
-import { FilterByOceanaButton } from '../UI/FilterByOceanaButton/FilterByOceanaButton';
+import FilterByAreaButton from '../UI/FilterByAreaButton';
+import FilterByOceanaButton from '../UI/FilterByOceanaButton';
 import NoFilteringButton from '../UI/NoFilteringButton';
-import { SortByAlphabetButton } from '../UI/SortByAlphabetButton/SortByAlphabetButton';
+import SortByAlphabetButton from '../UI/SortByAlphabetButton';
 
 import './buttons-section.scss';
 
