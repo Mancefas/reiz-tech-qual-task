@@ -40,7 +40,7 @@ export const ApiDataContextProvider = ({
     dataToShow,
     setDataToShow,
     isFiltered,
-    setIsFiltered
+    setIsFiltered,
   };
 
   return (

@@ -1,3 +1,3 @@
-import { NoFilteringButton } from "./NoFilteringButton";
+import { NoFilteringButton } from './NoFilteringButton';
 
 export default NoFilteringButton;
