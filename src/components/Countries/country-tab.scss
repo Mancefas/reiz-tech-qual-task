@@ -1,5 +1,15 @@
-.country-tab__container {
-  background-color: #dcffcf;
-  width: 100%;
-  border-radius: 15px;
+@import '../../sass/functions/index.scss';
+
+.country-tab {
+  &__container {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid black;
+
+    gap: 1rem;
+
+    & > :first-child {
+      padding-left: to-rem(10);
+    }
+  }
 }

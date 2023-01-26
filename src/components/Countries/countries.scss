@@ -1,9 +1,27 @@
+@import '../../sass/variables.scss';
+
 .countries {
   &__container {
     height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
     margin: 1rem;
+    border: 1px solid black;
+    border-radius: 7px;
+
+    & > :first-child {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    & > :last-child {
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      border: none;
+    }
+
+    & > :nth-child(odd) {
+      background-color: $country-even-item-color;
+    }
   }
 }
