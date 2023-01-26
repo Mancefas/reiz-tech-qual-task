@@ -16,6 +16,8 @@ interface ApiDataContextStore {
   setDataToShow: (data: Country[]) => void;
   isFiltered: boolean;
   setIsFiltered: (data: boolean) => void;
+  isLoading: boolean;
+  setIsLoading: (data: boolean) => void;
 }
 
 export const ApiDataContext = createContext<ApiDataContextStore>(
@@ -31,6 +33,7 @@ export const ApiDataContextProvider = ({
   const [error, setError] = useState<string>('');
   const [dataToShow, setDataToShow] = useState<Country[]>([]);
   const [isFiltered, setIsFiltered] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const apiDataContextStore = {
     apiData,
@@ -41,6 +44,8 @@ export const ApiDataContextProvider = ({
     setDataToShow,
     isFiltered,
     setIsFiltered,
+    isLoading,
+    setIsLoading,
   };
 
   return (
