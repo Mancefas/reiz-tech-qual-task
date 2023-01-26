@@ -1,13 +1,15 @@
 @import '../../sass/variables.scss';
+@import '../../sass/functions/index.scss';
 
 .countries {
   &__container {
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
-    border: 1px solid black;
+    margin: to-rem(16);
+    border: 1px solid $coutry-container-border-color;
     border-radius: 7px;
+    background-color: $country-odd-item-color;
 
     & > :first-child {
       border-top-left-radius: 7px;
