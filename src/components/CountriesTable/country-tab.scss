@@ -1,0 +1,13 @@
+@import '../../sass/functions/index.scss';
+@import '../../sass/variables.scss';
+
+.country-tab {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-bottom: 1px solid $coutry-container-border-color;
+    padding: to-rem(10);
+    gap: to-rem(8);
+  }
+}

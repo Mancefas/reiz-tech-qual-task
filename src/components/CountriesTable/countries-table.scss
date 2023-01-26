@@ -1,0 +1,42 @@
+@import '../../sass/variables.scss';
+@import '../../sass/functions/index.scss';
+@import '../../sass/mixins/index.scss';
+
+.countries-table {
+  &__container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: to-rem(16);
+    border: 1px solid $coutry-container-border-color;
+    border-radius: 7px;
+    background-color: $country-odd-item-color;
+
+    & > :first-child {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+
+    & > :last-child {
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      border: none;
+    }
+
+    & > :nth-child(odd) {
+      background-color: $country-even-item-color;
+    }
+  }
+
+  &__pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: to-rem(16);
+  }
+
+  &__pagination-button {
+    padding: to-rem(3) to-rem(6);
+
+    @include button-style;
+  }
+}

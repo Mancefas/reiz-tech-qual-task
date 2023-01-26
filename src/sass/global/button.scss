@@ -1,0 +1,9 @@
+@import '../functions/index.scss';
+@import '../variables.scss';
+@import '../mixins/index.scss';
+
+.button {
+  padding: to-rem(9) to-rem(14);
+
+  @include button-style;
+}

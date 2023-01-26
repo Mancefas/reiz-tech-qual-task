@@ -1,0 +1,13 @@
+.buttons-section {
+  &__container {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+  }
+  &__filter-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
