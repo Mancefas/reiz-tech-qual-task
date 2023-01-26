@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Countries from './components/Countries';
+import ButtonsSection from './components/ButtonsSection';
 import { ApiDataContextProvider } from './context/ApiDataContext';
 
-import './App.css';
-import ButtonsSection from './components/ButtonsSection';
+import './sass/global/index.scss';
 
 function App() {
   return (
