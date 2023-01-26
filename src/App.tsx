@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Countries from './components/Countries';
+import Countries from './components/CountriesTable';
 import ButtonsSection from './components/ButtonsSection';
 import { ApiDataContextProvider } from './context/ApiDataContext';
 
