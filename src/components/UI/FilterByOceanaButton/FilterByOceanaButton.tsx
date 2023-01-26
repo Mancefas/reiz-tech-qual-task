@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { useApiDataContext } from '../../../context/ApiDataContext';
 
 export const FilterByOceanaButton = () => {
-  const { apiData, setDataToShow } = useApiDataContext();
+  const { apiData, dataToShow, setDataToShow } = useApiDataContext();
   const [isFiltered, setIsFiltered] = useState<boolean>(false);
 
   const handleFilterByOceana = () => {
     if (!isFiltered) {
-      const filteredData = [...apiData].filter(
+      const filteredData = [...dataToShow].filter(
         (item) => item.region === 'Oceania'
       );
       setDataToShow(filteredData);
