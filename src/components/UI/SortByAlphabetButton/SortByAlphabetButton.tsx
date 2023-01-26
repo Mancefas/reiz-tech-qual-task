@@ -20,7 +20,10 @@ export const SortByAlphabetButton = () => {
   };
 
   return (
-    <button onClick={() => handleSort(`${sortedFromA ? 'ZtoA' : 'AtoZ'}`)}>
+    <button
+      className="button"
+      onClick={() => handleSort(`${sortedFromA ? 'ZtoA' : 'AtoZ'}`)}
+    >
       Sort {sortedFromA ? 'Z to A' : 'A to Z'}
     </button>
   );

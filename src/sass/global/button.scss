@@ -1,0 +1,22 @@
+@import '../functions/index.scss';
+@import '../variables.scss';
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: to-rem(9) to-rem(14);
+  border-radius: 8px;
+  background-color: $button-color-default;
+  border: none;
+
+  &:hover {
+    background-color: $button-color-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $button-color-active;
+    opacity: 0.9;
+  }
+}
