@@ -1,0 +1,19 @@
+@mixin button-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: $button-color-default;
+  border: none;
+  color: $button-text-color;
+
+  &:hover {
+    background-color: $button-color-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $button-color-active;
+    opacity: 0.9;
+  }
+}

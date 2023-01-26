@@ -1,23 +1,9 @@
 @import '../functions/index.scss';
 @import '../variables.scss';
+@import '../mixins/index.scss';
 
 .button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   padding: to-rem(9) to-rem(14);
-  border-radius: 8px;
-  background-color: $button-color-default;
-  border: none;
-  color: $button-text-color;
 
-  &:hover {
-    background-color: $button-color-hover;
-    cursor: pointer;
-  }
-
-  &:active {
-    background-color: $button-color-active;
-    opacity: 0.9;
-  }
+  @include button-style;
 }
