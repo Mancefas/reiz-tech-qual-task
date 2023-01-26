@@ -2,6 +2,7 @@ import React from 'react';
 
 import { FilterByAreaButton } from '../UI/FilterByAreaButton/FilterByAreaButton';
 import { FilterByOceanaButton } from '../UI/FilterByOceanaButton/FilterByOceanaButton';
+import NoFilteringButton from '../UI/NoFilteringButton';
 import { SortByAlphabetButton } from '../UI/SortByAlphabetButton/SortByAlphabetButton';
 
 import './buttons-section.scss';
@@ -12,6 +13,7 @@ export const ButtonsSection = () => {
       <div className="buttons-section__filter-container">
         <FilterByAreaButton />
         <FilterByOceanaButton />
+        <NoFilteringButton />
       </div>
       <div>
         <SortByAlphabetButton />

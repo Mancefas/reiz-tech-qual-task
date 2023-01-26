@@ -3,20 +3,14 @@ import React, { useState } from 'react';
 import { useApiDataContext } from '../../../context/ApiDataContext';
 
 export const FilterByAreaButton = () => {
-  const { apiData, dataToShow, setDataToShow } = useApiDataContext();
-  const [isFiltered, setIsFiltered] = useState<boolean>(false);
+  const { apiData, dataToShow, setDataToShow, setIsFiltered } = useApiDataContext();
 
   const handleFilterByArea = () => {
-    const areaOfLithuania = dataToShow.find((item) => item.name === "Lithuania")?.area!;
+    const areaOfLithuania = apiData.find((item) => item.name === "Lithuania")?.area!;
     const filteredData = [...dataToShow].filter((item) => item.area < areaOfLithuania);
     setDataToShow(filteredData);
-    setIsFiltered(!isFiltered)
-
-    if (isFiltered) {
-      setDataToShow(apiData);
-      setIsFiltered(!isFiltered)
-    }
+    setIsFiltered(true);
   }
 
-  return <button onClick={handleFilterByArea}>{isFiltered ? 'No filtering' : 'Filter by area bigger than LT'}</button>;
+  return <button onClick={handleFilterByArea}>Filter by area smaller than LT</button>;
 };
