@@ -1,5 +1,6 @@
 @import '../../sass/variables.scss';
 @import '../../sass/functions/index.scss';
+@import '../../sass/mixins/index.scss';
 
 .countries {
   &__container {
@@ -25,5 +26,17 @@
     & > :nth-child(odd) {
       background-color: $country-even-item-color;
     }
+  }
+
+  &__pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: to-rem(16);
+  }
+
+  &__pagination-button {
+    padding: to-rem(3) to-rem(6);
+
+    @include button-style;
   }
 }
