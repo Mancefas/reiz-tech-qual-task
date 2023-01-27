@@ -1,0 +1,16 @@
+@import '../../sass/mixins/index.scss';
+@import '../../sass/functions/index.scss';
+
+.pagination {
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: to-rem(16);
+  }
+
+  &__button {
+    padding: to-rem(3) to-rem(6);
+
+    @include button-style;
+  }
+}
