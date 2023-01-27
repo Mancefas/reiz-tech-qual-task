@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { useApiDataContext } from '../../context/ApiDataContext';
 
+import './pagination.scss';
+
 interface PropTypes {
   setResultsFrom: (data: number) => void;
   setResultsTo: (data: number) => void;
@@ -29,11 +31,11 @@ export const Pagination = ({
   }, [dataToShow]);
 
   return (
-    <div className="countries-table__pagination-container">
+    <div className="pagination__container">
       <button
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
-        className="countries-table__pagination-button"
+        className="pagination__button"
       >
         Prev
       </button>
@@ -43,7 +45,7 @@ export const Pagination = ({
       <button
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage === maxPages}
-        className="countries-table__pagination-button"
+        className="pagination__button"
       >
         Next
       </button>

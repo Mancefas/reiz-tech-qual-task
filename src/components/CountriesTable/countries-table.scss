@@ -27,16 +27,4 @@
       background-color: $country-odd-item-color;
     }
   }
-
-  &__pagination-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: to-rem(16);
-  }
-
-  &__pagination-button {
-    padding: to-rem(3) to-rem(6);
-
-    @include button-style;
-  }
 }
