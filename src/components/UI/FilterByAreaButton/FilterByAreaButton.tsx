@@ -9,9 +9,11 @@ export const FilterByAreaButton = () => {
   const handleFilterByArea = () => {
     const areaOfLithuania = apiData.find((item) => item.name === 'Lithuania')
       ?.area!;
+
     const filteredData = [...dataToShow].filter(
       (item) => item.area < areaOfLithuania
     );
+
     setDataToShow(filteredData);
     setIsFiltered(true);
   };

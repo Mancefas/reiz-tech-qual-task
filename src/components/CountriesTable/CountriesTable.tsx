@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { CountryTab } from './CountryTab';
 import { useAPICall } from '../../api/apiCall';
 import { useApiDataContext } from '../../context/ApiDataContext';
-
-import './countries-table.scss';
 import LoadingSpinner from '../LoadingSpinner';
 import Pagination from '../Pagination';
+
+import './countries-table.scss';
 
 export const CountriesTable = () => {
   const { dataToShow, error, isLoading } = useApiDataContext();
@@ -14,7 +14,8 @@ export const CountriesTable = () => {
 
   const [resultsFrom, setResultsFrom] = useState<number>();
   const [resultsTo, setResultsTo] = useState<number>();
-  const resultsPerPage = 10;
+  //maybe add a button to change how many result to show later?
+  const [resultsPerPage, setResultrsPerPage] = useState<number>(10);
 
   const getCountriesToShow = dataToShow.slice(resultsFrom, resultsTo);
 
