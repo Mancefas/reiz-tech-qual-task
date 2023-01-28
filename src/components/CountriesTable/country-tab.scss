@@ -10,4 +10,13 @@
     padding: to-rem(10);
     gap: to-rem(8);
   }
+
+  &__name-container {
+    display: flex;
+    gap: to-rem(8);
+  }
+
+  &__flag {
+    width: to-rem(35);
+  }
 }
