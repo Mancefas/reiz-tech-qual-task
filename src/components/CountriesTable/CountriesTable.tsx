@@ -14,8 +14,8 @@ export const CountriesTable = () => {
 
   const [resultsFrom, setResultsFrom] = useState<number>();
   const [resultsTo, setResultsTo] = useState<number>();
-  //maybe add a button to change how many result to show later?
-  const [resultsPerPage, setResultrsPerPage] = useState<number>(10);
+  //maybe add a button to change how many result to show later need setResultPage for that?
+  const [resultsPerPage] = useState<number>(10);
 
   const getCountriesToShow = dataToShow.slice(resultsFrom, resultsTo);
 
