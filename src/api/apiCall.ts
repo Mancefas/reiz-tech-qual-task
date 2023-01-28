@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 
 import { useApiDataContext } from '../context/ApiDataContext';
 import { API_LINK } from '../constants/links';
@@ -22,7 +22,7 @@ export const useAPICall = () => {
       setError(JSON.stringify(error));
       setIsLoading(false);
     }
-  }, [setApiData, setError]);
+  }, [setApiData, setError, setDataToShow, setIsLoading]);
 
   useEffect(() => {
     dataFromAPI();

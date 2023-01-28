@@ -1,0 +1,12 @@
+@import '../../sass/variables.scss';
+
+.header {
+  min-height: 10vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import FilterByAreaButton from '../UI/FilterByAreaButton';
 import FilterByOceanaButton from '../UI/FilterByOceanaButton';
 import NoFilteringButton from '../UI/NoFilteringButton';
