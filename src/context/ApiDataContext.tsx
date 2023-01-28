@@ -5,6 +5,7 @@ interface Country {
   region: string;
   area: number;
   independent: boolean;
+  alpha3Code: string;
 }
 
 interface ApiDataContextStore {

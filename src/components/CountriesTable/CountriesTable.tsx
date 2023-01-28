@@ -12,8 +12,8 @@ export const CountriesTable = () => {
   const { dataToShow, error, isLoading } = useApiDataContext();
   useAPICall();
 
-  const [resultsFrom, setResultsFrom] = useState<number>();
-  const [resultsTo, setResultsTo] = useState<number>();
+  const [resultsFrom, setResultsFrom] = useState<number>(0);
+  const [resultsTo, setResultsTo] = useState<number>(10);
   //maybe add a button to change how many result to show later need setResultPage for that?
   const [resultsPerPage] = useState<number>(10);
 
