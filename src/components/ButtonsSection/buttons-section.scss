@@ -6,13 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1rem;
 
     @media (max-width: 768px) {
       flex-direction: column;
       height: fit-content;
       gap: 0.5rem;
-      margin-top: to-rem(10);
+      margin: to-rem(10) 0;
     }
   }
   &__filter-container {

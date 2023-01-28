@@ -5,7 +5,7 @@
   &__container {
     display: flex;
     justify-content: center;
-    margin-bottom: to-rem(16);
+    margin: to-rem(16) 0;
   }
 
   &__button {
