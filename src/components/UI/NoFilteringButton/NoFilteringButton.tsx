@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useApiDataContext } from '../../../context/ApiDataContext';
 
 export const NoFilteringButton = () => {
